@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="table-container">
+    <br /><br />
+    <div class="row">
+      <div class="col-12" style="display: flex">
+        <div class="col-md-4">
+          <div class="input-group">
+            <input id="msg" type="text" [(ngModel)]="search" (keyup)="searchData()" class="form-control" style="border-top-left-radius: 15px;border-bottom-left-radius: 15px;height: inherit" name="msg" placeholder="Search">
+            <span class="input-group-addon" style="background-color: mediumpurple;border-bottom-right-radius:15px;border-top-right-radius:15px;width:fit-content;padding:15px"><i class="fa-solid fa-magnifying-glass"></i></span>
+          </div>
+        </div>
+        <div class="col-md-2" style="display:flex;align-items:center;margin-left:20px">
+          <div style="background-color: white; border-radius: 15px; padding:15px"><i class="fa-solid fa-filter"></i></div>
+        </div>
+        <div class="col-md-6" style="text-align:end">
+          <button class="btn btn-primary" style="background-color: mediumpurple; border-radius: 15px;" (click)="openModal()">Yeni Hesap Ekle</button>
+        </div>
+      </div>
+    </div>
+    <br />
+    <table id="myTable" class="table table-striped table-bordered">
+    </table>
+    <br />
+    <div class="row" style="display: flex; align-items: center;">
+      <div class="col-md-4" style="display: flex; align-items: center;">
+        <span>Show: </span>
+        <input type="number" name="showNumber" [(ngModel)]="perPage" (change)="changeCount()" value="" style="width: 50px; border-radius: 15px; margin-right: 10px;">
+      </div>
+      <div class="col-md-6" style="display: flex; justify-content: flex-end; align-items: center;">
+        <a href="#" (click)="changePage(currentPage - 1)"><i class="fa-solid fa-left-long"></i></a>
+        <p style="margin: 0 10px;">{{ currentPage }}</p>
+        <a href="#" (click)="changePage(currentPage + 1)"><i class="fa-solid fa-right-long"></i></a>
+      </div>
+      <div class="col-md-2">
+        <p style="text-align: right; margin: 0;">Toplam {{ data.length }} veriden {{perPage}} kadar veri gösteriliyor</p>
+      </div>
+    </div>
+    <br /><br />
+  </div>
+</div>
+
+

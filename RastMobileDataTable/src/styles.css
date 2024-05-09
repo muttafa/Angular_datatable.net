@@ -1,0 +1,12 @@
+body {
+  background-color: aliceblue;
+}
+
+
+.custom-ngb-modal-backdrop {
+  z-index: 0;
+}
+
+.custom-ngb-modal-window {
+  z-index: 2000;
+}

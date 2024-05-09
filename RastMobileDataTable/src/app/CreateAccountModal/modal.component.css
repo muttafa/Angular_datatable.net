@@ -1,0 +1,7 @@
+.modal-content {
+  z-index: 101
+}
+
+.modal-backdrop {
+  z-index: 100
+}
